@@ -1,0 +1,142 @@
+{
+  "sync_timestamp": "2025-09-14T12:00:00.000Z",
+  "providers": {
+    "gdrive": {
+      "provider": "gdrive",
+      "sync_time": "2025-09-14T12:00:00.000Z",
+      "file_count": 342,
+      "tree_structure": "protonord/\n├── cad-files/\n│   ├── automotive/\n│   │   ├── charging-port-covers/\n│   │   └── accessories/\n│   ├── electronics/\n│   └── prototypes/\n├── documentation/\n│   ├── user-manuals/\n│   ├── technical-specs/\n│   └── safety-guides/\n├── images/\n│   ├── product-photos/\n│   ├── marketing/\n│   └── technical-drawings/\n└── shopify-exports/\n    ├── products/\n    └── orders/",
+      "organized_files": {
+        "directories": {
+          "protonord/cad-files": {
+            "name": "cad-files",
+            "mod_time": "2025-09-14T10:30:00.000Z",
+            "path": "protonord/cad-files"
+          },
+          "protonord/documentation": {
+            "name": "documentation",
+            "mod_time": "2025-09-14T09:15:00.000Z",
+            "path": "protonord/documentation"
+          },
+          "protonord/images": {
+            "name": "images",
+            "mod_time": "2025-09-14T11:45:00.000Z",
+            "path": "protonord/images"
+          }
+        },
+        "files_by_type": {
+          ".dwg": [
+            {
+              "name": "jeep-avenger-charging-cover.dwg",
+              "path": "protonord/cad-files/automotive/jeep-avenger-charging-cover.dwg",
+              "size": 2048576,
+              "mod_time": "2025-09-14T10:30:00.000Z",
+              "mime_type": "application/acad"
+            },
+            {
+              "name": "cupra-born-weather-cover.dwg",
+              "path": "protonord/cad-files/automotive/cupra-born-weather-cover.dwg",
+              "size": 1536768,
+              "mod_time": "2025-09-13T14:20:00.000Z",
+              "mime_type": "application/acad"
+            }
+          ],
+          ".pdf": [
+            {
+              "name": "installation-guide-jeep.pdf",
+              "path": "protonord/documentation/user-manuals/installation-guide-jeep.pdf",
+              "size": 524288,
+              "mod_time": "2025-09-14T09:15:00.000Z",
+              "mime_type": "application/pdf"
+            },
+            {
+              "name": "technical-specifications.pdf",
+              "path": "protonord/documentation/technical-specs/technical-specifications.pdf",
+              "size": 1048576,
+              "mod_time": "2025-09-12T16:30:00.000Z",
+              "mime_type": "application/pdf"
+            }
+          ],
+          ".jpg": [
+            {
+              "name": "jeep-avenger-front.jpg",
+              "path": "protonord/images/product-photos/jeep-avenger-front.jpg",
+              "size": 256000,
+              "mod_time": "2025-09-14T11:45:00.000Z",
+              "mime_type": "image/jpeg"
+            },
+            {
+              "name": "cupra-born-installed.jpg",
+              "path": "protonord/images/product-photos/cupra-born-installed.jpg",
+              "size": 198000,
+              "mod_time": "2025-09-13T15:20:00.000Z",
+              "mime_type": "image/jpeg"
+            }
+          ],
+          ".step": [
+            {
+              "name": "charging-cover-assembly.step",
+              "path": "protonord/cad-files/automotive/charging-cover-assembly.step",
+              "size": 3145728,
+              "mod_time": "2025-09-14T08:45:00.000Z",
+              "mime_type": "application/step"
+            }
+          ]
+        },
+        "total_files": 342,
+        "total_size": 1073741824
+      }
+    },
+    "jottacloud": {
+      "provider": "jottacloud",
+      "sync_time": "2025-09-14T12:00:00.000Z",
+      "file_count": 328,
+      "tree_structure": "protonord/\n├── backup/\n│   ├── daily/\n│   ├── weekly/\n│   └── monthly/\n├── archive/\n│   ├── 2024/\n│   └── 2025/\n├── shared/\n│   ├── customers/\n│   └── partners/\n└── temp/",
+      "organized_files": {
+        "directories": {
+          "protonord/backup": {
+            "name": "backup",
+            "mod_time": "2025-09-14T06:00:00.000Z",
+            "path": "protonord/backup"
+          },
+          "protonord/archive": {
+            "name": "archive",
+            "mod_time": "2025-09-13T18:00:00.000Z",
+            "path": "protonord/archive"
+          }
+        },
+        "files_by_type": {
+          ".zip": [
+            {
+              "name": "protonord-backup-20250914.zip",
+              "path": "protonord/backup/daily/protonord-backup-20250914.zip",
+              "size": 536870912,
+              "mod_time": "2025-09-14T06:00:00.000Z",
+              "mime_type": "application/zip"
+            }
+          ],
+          ".tar.gz": [
+            {
+              "name": "weekly-backup-202437.tar.gz",
+              "path": "protonord/backup/weekly/weekly-backup-202437.tar.gz",
+              "size": 268435456,
+              "mod_time": "2025-09-13T06:00:00.000Z",
+              "mime_type": "application/gzip"
+            }
+          ],
+          ".json": [
+            {
+              "name": "shopify-products-backup.json",
+              "path": "protonord/archive/2025/shopify-products-backup.json",
+              "size": 1048576,
+              "mod_time": "2025-09-14T00:00:00.000Z",
+              "mime_type": "application/json"
+            }
+          ]
+        },
+        "total_files": 328,
+        "total_size": 805306368
+      }
+    }
+  }
+}
