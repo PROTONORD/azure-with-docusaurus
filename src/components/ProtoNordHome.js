@@ -25,6 +25,11 @@ const ProtoNordHome = () => {
               <h3>Docusaurus Wiki</h3>
               <p>Kraftig dokumentasjonsplattform basert på React</p>
             </div>
+            <div className={styles.feature}>
+              <div className={styles.featureIcon}>🛒</div>
+              <h3>Shopify Integrasjon</h3>
+              <p>Automatisk synkronisering av produktdata fra Shopify Admin API</p>
+            </div>
           </div>
         </div>
       </section>
@@ -39,6 +44,10 @@ const ProtoNordHome = () => {
           <div className={styles.statCard}>
             <div className={styles.statNumber}>24/7</div>
             <div className={styles.statLabel}>Tilgjengelig</div>
+          </div>
+          <div className={styles.statCard}>
+            <div className={styles.statNumber}>161</div>
+            <div className={styles.statLabel}>Shopify Produkter</div>
           </div>
           <div className={styles.statCard}>
             <div className={styles.statNumber}>∞</div>
@@ -66,6 +75,16 @@ const ProtoNordHome = () => {
             <h3>Global CDN</h3>
             <p>Innebygd Content Delivery Network for rask lasting verden over.</p>
           </div>
+          <div className={styles.serviceCard}>
+            <div className={styles.serviceIcon}>🛒</div>
+            <h3>Shopify API Integrasjon</h3>
+            <p>Automatisk henting av produktdata fra Shopify butikk med filtering på aktive produkter og sikker API-tilgang.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <div className={styles.serviceIcon}>☁️</div>
+            <h3>Cloud Files Tilgang</h3>
+            <p>Planlagt integrasjon med rclone for tilgang til Google Drive og Jottacloud filer direkte fra nettstedet.</p>
+          </div>
         </div>
       </section>
 
@@ -85,11 +104,16 @@ const ProtoNordHome = () => {
           </div>
           <div className={styles.processStep}>
             <div className={styles.stepNumber}>3</div>
+            <h3>Shopify Sync</h3>
+            <p>Henter produktdata fra Shopify API og oppdaterer lokale data filer</p>
+          </div>
+          <div className={styles.processStep}>
+            <div className={styles.stepNumber}>4</div>
             <h3>Docusaurus Build</h3>
             <p>npm run build genererer statiske filer til build/ mappe</p>
           </div>
           <div className={styles.processStep}>
-            <div className={styles.stepNumber}>4</div>
+            <div className={styles.stepNumber}>5</div>
             <h3>Azure Deploy</h3>
             <p>Statiske filer deployeres til Azure Static Web Apps</p>
           </div>
@@ -103,7 +127,7 @@ const ProtoNordHome = () => {
             <h3>Om Dette Prosjektet</h3>
             <p>
               Dette er en Docusaurus-basert wiki og dokumentasjonsside som automatisk deployes til Azure Static Web Apps. 
-              Prosjektet demonstrerer moderne web-deployment med GitHub Actions og Azure-integrering.
+              Prosjektet demonstrerer moderne web-deployment med GitHub Actions og Azure-integrering samt Shopify API-integrasjon.
             </p>
           </div>
           <div className={styles.footerLinks}>
@@ -112,12 +136,13 @@ const ProtoNordHome = () => {
               <span>⚛️ React/Docusaurus</span>
               <span>☁️ Azure Static Web Apps</span>
               <span>🔄 GitHub Actions</span>
+              <span>🛒 Shopify Admin API</span>
             </div>
           </div>
         </div>
         <div className={styles.footerBottom}>
           <p>© 2025, PROTONORD - Azure Static Web Apps Demo</p>
-          <p>Automatisk deployment med GitHub Actions</p>
+          <p>Automatisk deployment med GitHub Actions og Shopify integrasjon</p>
         </div>
       </section>
     </div>
