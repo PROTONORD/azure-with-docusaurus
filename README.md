@@ -4,7 +4,7 @@ En Docusaurus-basert wiki og dokumentasjonsside som automatisk deployes til Azur
 
 ## 🚀 Live Demo
 
-Nettsiden er tilgjengelig på: [Azure Static Web Apps URL kommer her]
+Nettsiden er tilgjengelig på: https://lively-moss-0296dab03.1.azurestaticapps.net/
 
 ## 📋 Oversikt
 
