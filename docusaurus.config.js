@@ -115,7 +115,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} ProtoNord. Bygget med Docusaurus på Azure Static Web Apps.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Protonord. Bygget med Docusaurus.`,
       },
       prism: {
         theme: lightTheme,
