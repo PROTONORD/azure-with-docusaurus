@@ -26,6 +26,11 @@ class ShopifySync:
         self.store_url = config.SHOPIFY_STORE_URL
         self.access_token = config.SHOPIFY_ACCESS_TOKEN
         self.api_version = config.SHOPIFY_API_VERSION
+        
+        # Valider at vi har nødvendige kredentialer
+        if not self.store_url or not self.access_token:
+            raise ValueError("Shopify kredentialer ikke konfigurert - sjekk SHOPIFY_STORE_URL og SHOPIFY_ACCESS_TOKEN")
+        
         self.base_url = f"https://{self.store_url}/admin/api/{self.api_version}"
         self.headers = {
             "X-Shopify-Access-Token": self.access_token,

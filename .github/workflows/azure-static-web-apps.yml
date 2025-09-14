@@ -59,6 +59,7 @@ jobs:
           SHOPIFY_API_VERSION: ${{ secrets.SHOPIFY_API_VERSION }}
         run: |
           echo "🔧 Validating Shopify configuration..."
+          cd ${{ github.workspace }}
           python3 scripts/config.py || echo "⚠️ Noen konfigurasjoner mangler (forventes for cloud storage)"
 
       - name: Sync cloud storage data
@@ -73,7 +74,11 @@ jobs:
           SHOPIFY_API_VERSION: ${{ secrets.SHOPIFY_API_VERSION }}
         run: |
           echo "🛍️ Syncing Shopify product data..."
-          python scripts/shopify_sync.py || echo "⚠️ Shopify sync completed with warnings"
+          echo "Working directory: $(pwd)"
+          echo "Python version: $(python3 --version)"
+          echo "Files in scripts/: $(ls -la scripts/ || echo 'scripts directory not found')"
+          cd ${{ github.workspace }}
+          python3 scripts/shopify_sync.py || echo "⚠️ Shopify sync completed with warnings"
 
       - name: Install dependencies
         run: npm install
