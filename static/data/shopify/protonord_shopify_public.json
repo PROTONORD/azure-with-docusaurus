@@ -1,0 +1,154 @@
+{
+  "shop_info": {
+    "name": "ProtoNord",
+    "domain": "protonord.myshopify.com",
+    "description": "Norsk kvalitet og innovasjon - 3D-skanning og spesialdesignet produksjon"
+  },
+  "statistics": {
+    "products": 161,
+    "custom_collections": 15,
+    "orders": 42,
+    "customers": 89
+  },
+  "products": [
+    {
+      "id": 1,
+      "title": "BMW E30 Dørhåndtak Venstre",
+      "product_type": "Bilreservedeler",
+      "status": "active",
+      "variants": [
+        {
+          "price": "299.00",
+          "sku": "BMW-E30-DH-V"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/example/bmw-e30-door-handle.jpg",
+          "alt": "BMW E30 Dørhåndtak Venstre"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Audi A4 B5 Handskehus Deksel",
+      "product_type": "Bilreservedeler", 
+      "status": "active",
+      "variants": [
+        {
+          "price": "199.00",
+          "sku": "AUDI-A4-HD"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/example/audi-a4-glove-box.jpg",
+          "alt": "Audi A4 B5 Handskehus Deksel"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Mercedes W124 Midtkonsoll",
+      "product_type": "Bilreservedeler",
+      "status": "active", 
+      "variants": [
+        {
+          "price": "449.00",
+          "sku": "MB-W124-MK"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/example/mercedes-w124-console.jpg",
+          "alt": "Mercedes W124 Midtkonsoll"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Volvo 240 Instrumentpanel Deksel",
+      "product_type": "Bilreservedeler",
+      "status": "active",
+      "variants": [
+        {
+          "price": "349.00", 
+          "sku": "VOLVO-240-IP"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/example/volvo-240-dash.jpg",
+          "alt": "Volvo 240 Instrumentpanel Deksel"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Saab 900 Turbo Luftfilter Deksel",
+      "product_type": "Bilreservedeler",
+      "status": "active",
+      "variants": [
+        {
+          "price": "229.00",
+          "sku": "SAAB-900-AF"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/example/saab-900-air-filter.jpg", 
+          "alt": "Saab 900 Turbo Luftfilter Deksel"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Toyota Corolla AE86 Takspoiler",
+      "product_type": "Bilreservedeler",
+      "status": "active",
+      "variants": [
+        {
+          "price": "899.00",
+          "sku": "TOYOTA-AE86-TS"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/example/toyota-ae86-spoiler.jpg",
+          "alt": "Toyota Corolla AE86 Takspoiler"
+        }
+      ]
+    }
+  ],
+  "collections": {
+    "custom_collections": [
+      {
+        "id": 1,
+        "title": "BMW Deler",
+        "product_count": 45
+      },
+      {
+        "id": 2, 
+        "title": "Audi Deler",
+        "product_count": 38
+      },
+      {
+        "id": 3,
+        "title": "Mercedes Deler", 
+        "product_count": 29
+      },
+      {
+        "id": 4,
+        "title": "Volvo Deler",
+        "product_count": 22
+      },
+      {
+        "id": 5,
+        "title": "Saab Deler",
+        "product_count": 18
+      }
+    ]
+  },
+  "last_updated": "2025-09-14T19:45:00.000Z",
+  "data_source": "Mock data for local development"
+}
