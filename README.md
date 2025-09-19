@@ -1,226 +1,240 @@
 # Azure Docusaurus Static Web App
 
-En Docusaurus-basert wiki og dokumentasjonsside som automatisk deployes til Azure Static Web Apps med GitHub Actions. Prosjektet er basert på innhold fra [PROTONORD/project-lifecycle-manager](https://github.com/PROTONORD/project-lifecycle-manager) repositoryet.
+A Docusaurus-based wiki and documentation site that automatically deploys to Azure Static Web Apps using GitHub Actions. The project is based on content from the [PROTONORD/project-lifecycle-manager](https://github.com/PROTONORD/project-lifecycle-manager) repository.
 
 ## 🚀 Live Demo
 
-Nettsiden er tilgjengelig på: https://lively-moss-0296dab03.1.azurestaticapps.net/
+The website is available at: [https://lively-moss-0296dab03.1.azurestaticapps.net/](https://lively-moss-0296dab03.1.azurestaticapps.net/)
 
-## 📋 Oversikt
+## 📋 Overview
 
-Dette prosjektet demonstrerer:
-- **Docusaurus v3** som dokumentasjonsplattform
-- **Azure Static Web Apps** for hosting
-- **GitHub Actions** for automatisk deployment
-- **React komponenter** for interaktive sider
-- **Responsivt design** med dark/light mode support
+This project demonstrates:
 
-## 🛠️ Teknologi Stack
+  - **Docusaurus v3** as a documentation platform
+  - **Azure Static Web Apps** for hosting
+  - **GitHub Actions** for automatic deployment
+  - **React components** for interactive pages
+  - **Responsive design** with dark/light mode support
 
-- **Frontend**: Docusaurus v3, React, CSS Modules
-- **Hosting**: Azure Static Web Apps
-- **CI/CD**: GitHub Actions
-- **Package Manager**: npm
-- **Build Output**: Statiske HTML/CSS/JS filer
+## 🛠️ Technology Stack
 
-## ⚙️ GitHub Actions Konfiguration
+  - **Frontend**: Docusaurus v3, React, CSS Modules
+  - **Hosting**: Azure Static Web Apps
+  - **CI/CD**: GitHub Actions
+  - **Package Manager**: npm
+  - **Build Output**: Static HTML/CSS/JS files
 
-Automatisk deployment er satt opp med følgende parametere:
+## ⚙️ GitHub Actions Configuration
+
+Automatic deployment is set up with the following parameters:
 
 ```yaml
-app_location: "/"        # Rot av repository
-output_location: "build" # Hvor Docusaurus bygger statiske filer
-api_location: ""         # Ingen API (kun statisk side)
+app_location: "/"      # Root of the repository
+output_location: "build" # Where Docusaurus builds static files
+api_location: ""       # No API (static site only)
 ```
 
 ### Workflow Triggers
-- **Push til main branch**: Deployer automatisk til produksjon
-- **Pull requests**: Oppretter preview-miljø
-- **PR lukkes**: Sletter preview-miljø
 
-## 🏗️ Prosjektstruktur
+  - **Push to main branch**: Deploys automatically to production
+  - **Pull requests**: Creates a preview environment
+  - **PR closed**: Deletes the preview environment
+
+## 🏗️ Project Structure
 
 ```
 azure-with-docusaurus/
 ├── .github/
 │   └── workflows/
 │       └── azure-static-web-apps.yml  # GitHub Actions workflow
-├── docs/                              # Dokumentasjon (Markdown)
-│   ├── intro.md                       # Introduksjon
-│   ├── cloud-storage.md               # Cloud storage guide
-│   ├── backup-system.md               # Backup system dokumentasjon
-│   └── azure-deployment.md            # Azure deployment guide
-├── src/                               # React komponenter og sider
+├── docs/                             # Documentation (Markdown)
+│   ├── intro.md                      # Introduction
+│   ├── cloud-storage.md              # Cloud storage guide
+│   ├── backup-system.md              # Backup system documentation
+│   └── azure-deployment.md           # Azure deployment guide
+├── src/                              # React components and pages
 │   ├── components/
-│   │   ├── ProtoNordHome.js           # Hovedside komponent
-│   │   └── ProtoNordHome.module.css   # Stilark
+│   │   ├── ProtoNordHome.js          # Main page component
+│   │   └── ProtoNordHome.module.css  # Stylesheet
 │   ├── pages/
-│   │   ├── index.js                   # Hjem side
-│   │   ├── cloud-files.js             # Cloud filer side
-│   │   └── shopify.js                 # Shopify dashboard side
+│   │   ├── index.js                  # Home page
+│   │   ├── cloud-files.js            # Cloud files page
+│   │   └── shopify.js                # Shopify dashboard page
 │   └── css/
-│       └── custom.css                 # Global stilark
-├── static/                            # Statiske filer
+│       └── custom.css                # Global stylesheet
+├── static/                           # Static files
 │   └── img/
-│       ├── logo.svg                   # Logo
-│       └── favicon.ico                # Favicon
-├── docusaurus.config.js               # Hovedkonfigurasjon
-├── sidebars.js                        # Sidebar konfigurasjon
-└── package.json                       # Dependencies og scripts
+│       ├── logo.svg                  # Logo
+│       └── favicon.ico               # Favicon
+├── docusaurus.config.js              # Main configuration
+├── sidebars.js                       # Sidebar configuration
+└── package.json                      # Dependencies and scripts
 ```
 
-## 🔧 Lokal Utvikling
+## 🔧 Local Development
 
-### Forutsetninger
-- Node.js 18+ 
-- npm eller yarn
+### Prerequisites
 
-### Installasjon og Start
+  - Node.js 18+
+  - npm or yarn
+
+### Installation and Startup
 
 ```bash
-# Klon repositoryet
+# Clone the repository
 git clone https://github.com/PROTONORD/azure-with-docusaurus.git
 cd azure-with-docusaurus
 
-# Installer dependencies
+# Install dependencies
 npm install
 
-# Start utviklingsserver
+# Start the development server
 npm start
 ```
 
-Nettsiden vil være tilgjengelig på `http://localhost:3001`
+The website will be available at `http://localhost:3001`
 
-### Nyttige Kommandoer
+### Useful Commands
 
 ```bash
-# Bygg for produksjon
+# Build for production
 npm run build
 
-# Forhåndsvis bygget side
+# Preview the built site
 npm run serve
 
-# Clear cache (hvis problemer)
+# Clear cache (if issues arise)
 npm run clear
 
-# Generer oversettelser
+# Generate translations
 npm run write-translations
 ```
 
 ## 🌐 Azure Static Web Apps Setup
 
-### 1. Opprett Azure Static Web App
+### 1\. Create Azure Static Web App
 
-1. Logg inn på [Azure Portal](https://portal.azure.com)
-2. Søk etter "Static Web Apps" og klikk "Create"
-3. Konfigurer:
-   - **Resource Group**: Velg eller opprett ny
-   - **Name**: `azure-with-docusaurus`
-   - **Plan**: Free (for testing)
-   - **Region**: West Europe
-   - **Source**: GitHub
-   - **Repository**: `PROTONORD/azure-with-docusaurus`
-   - **Branch**: `main`
-   - **App location**: `/`
-   - **Output location**: `build`
+1.  Log in to the [Azure Portal](https://portal.azure.com)
+2.  Search for "Static Web Apps" and click "Create"
+3.  Configure:
+      - **Resource Group**: Select or create a new one
+      - **Name**: `azure-with-docusaurus`
+      - **Plan**: Free (for testing)
+      - **Region**: West Europe
+      - **Source**: GitHub
+      - **Repository**: `PROTONORD/azure-with-docusaurus`
+      - **Branch**: `main`
+      - **App location**: `/`
+      - **Output location**: `build`
 
-### 2. Automatisk GitHub Integration
+### 2\. Automatic GitHub Integration
 
-Azure oppretter automatisk:
-- GitHub secret `AZURE_STATIC_WEB_APPS_API_TOKEN`
-- Workflow fil `.github/workflows/azure-static-web-apps.yml`
+Azure automatically creates:
 
-### 3. Custom Domain (valgfritt)
+  - A GitHub secret `AZURE_STATIC_WEB_APPS_API_TOKEN`
+  - A workflow file `.github/workflows/azure-static-web-apps.yml`
 
-Konfigurer eget domene i Azure Portal under "Custom domains".
+### 3\. Custom Domain (optional)
+
+Configure your own domain in the Azure Portal under "Custom domains".
 
 ## 📦 Deployment Process
 
-### Automatisk Deployment
+### Automatic Deployment
 
-1. **Code push** til main branch
-2. **GitHub Actions** triggers workflow
-3. **Dependencies** installeres med `npm install`
-4. **Build** kjører `npm run build` (genererer til `build/`)
-5. **Deploy** til Azure Static Web Apps
+1.  **Code push** to the main branch
+2.  **GitHub Actions** triggers the workflow
+3.  **Dependencies** are installed with `npm install`
+4.  **Build** runs `npm run build` (generates to `build/`)
+5.  **Deploy** to Azure Static Web Apps
 
 ### Manual Deployment
 
 ```bash
-# Bygg lokalt
+# Build locally
 npm run build
 
-# Deploy via Azure CLI (krever setup)
+# Deploy via Azure CLI (requires setup)
 az staticwebapp deploy --name azure-with-docusaurus --source build/
 ```
 
-## 🎨 Features og Komponenter
+## 🎨 Features and Components
 
-### ProtoNordHome Komponent
-- **Responsivt design** som fungerer på alle enheter
-- **Dark/Light mode** support automatisk
-- **Gradients og animasjoner** for moderne utseende
-- **Grid layouts** for optimal organisering av innhold
+### ProtoNordHome Component
 
-### Dokumentasjon
-- **Automatisk sidebar** generering basert på filstruktur
-- **Versjonering** og internationalisering støtte
-- **Søkefunksjon** innebygd i Docusaurus
-- **Markdown** med React komponenter
+  - **Responsive design** that works on all devices
+  - **Dark/Light mode** support automatically
+  - **Gradients and animations** for a modern look
+  - **Grid layouts** for optimal content organization
 
-### Sider
-- **Hjem**: Oversikt og introduksjon
-- **Cloud Files**: Placeholder for filhåndtering
-- **Shopify**: Placeholder for e-handel integrasjon
-- **Docs**: Strukturert dokumentasjon
+### Documentation
 
-## 🔍 SEO og Performance
+  - **Automatic sidebar** generation based on file structure
+  - **Versioning** and internationalization support
+  - **Search functionality** built into Docusaurus
+  - **Markdown** with React components
 
-### Optimalisering
-- **Statiske filer** for rask lasting
-- **CDN** via Azure Static Web Apps
-- **Komprimering** automatisk aktivert
-- **PWA** støtte via Docusaurus
+### Pages
+
+  - **Home**: Overview and introduction
+  - **Cloud Files**: Placeholder for file management
+  - **Shopify**: Placeholder for e-commerce integration
+  - **Docs**: Structured documentation
+
+## 🔍 SEO and Performance
+
+### Optimization
+
+  - **Static files** for fast loading
+  - **CDN** via Azure Static Web Apps
+  - **Compression** automatically enabled
+  - **PWA** support via Docusaurus
 
 ### Metadata
-- **Title tags** og beskrivelser konfigurert
-- **Open Graph** metadata for sosiale medier
-- **Structured data** via Docusaurus
 
-## 🛡️ Sikkerhet
+  - **Title tags** and descriptions configured
+  - **Open Graph** metadata for social media
+  - **Structured data** via Docusaurus
+
+## 🛡️ Security
 
 ### Azure Static Web Apps
-- **Automatisk HTTPS** med SSL sertifikat
-- **Content Security Policy** kan konfigureres
-- **Rate limiting** innebygd
-- **DDoS protection** via Azure
+
+  - **Automatic HTTPS** with SSL certificate
+  - **Content Security Policy** can be configured
+  - **Rate limiting** built-in
+  - **DDoS protection** via Azure
 
 ### GitHub Actions
-- **Secrets management** for API tokens
-- **Permission-based** deployment
-- **Audit trail** for alle deployments
 
-## 📊 Overvåking og Analytics
+  - **Secrets management** for API tokens
+  - **Permission-based** deployment
+  - **Audit trail** for all deployments
+
+## 📊 Monitoring and Analytics
 
 ### Azure Portal
-- **Request metrics** og response times
-- **Error tracking** og logging
-- **Geographic distribution** av brukere
-- **Performance insights**
 
-### Tilgjengelige Metrics
-- Page views og unique visitors
-- Load times og performance
-- Error rates og status codes
-- Geographic og device statistics
+  - **Request metrics** and response times
+  - **Error tracking** and logging
+  - **Geographic distribution** of users
+  - **Performance insights**
 
-## 🚨 Feilsøking
+### Available Metrics
 
-### Vanlige Build Problemer
+  - Page views and unique visitors
+  - Load times and performance
+  - Error rates and status codes
+  - Geographic and device statistics
+
+## 🚨 Troubleshooting
+
+### Common Build Issues
 
 #### Node.js Version
+
 ```yaml
-# Legg til i workflow hvis problemer
+# Add to workflow if issues occur
 - name: Setup Node.js
   uses: actions/setup-node@v3
   with:
@@ -228,6 +242,7 @@ az staticwebapp deploy --name azure-with-docusaurus --source build/
 ```
 
 #### Cache Issues
+
 ```bash
 # Clear all caches
 npm run clear
@@ -237,8 +252,9 @@ npm install
 ```
 
 #### Build Memory Issues
+
 ```yaml
-# Øk memory limit i workflow
+# Increase memory limit in workflow
 - name: Build with more memory
   run: NODE_OPTIONS="--max-old-space-size=4096" npm run build
 ```
@@ -246,66 +262,72 @@ npm install
 ### Azure Issues
 
 #### Deployment Fails
-1. Sjekk GitHub Actions logs
-2. Verifiser Azure Static Web Apps API token
-3. Kontroller at `build/` mappen inneholder filer
-4. Test lokal build først
+
+1.  Check the GitHub Actions logs
+2.  Verify the Azure Static Web Apps API token
+3.  Ensure the `build/` folder contains files
+4.  Test the local build first
 
 #### Custom Domain
-1. Konfigurer DNS CNAME til Azure Static Web Apps URL
-2. Vent på SSL sertifikat provisjonering (kan ta opptil 24 timer)
-3. Sjekk domain validation i Azure Portal
 
-## 📈 Videre Utvikling
+1.  Configure DNS CNAME to the Azure Static Web Apps URL
+2.  Wait for SSL certificate provisioning (can take up to 24 hours)
+3.  Check domain validation in the Azure Portal
 
-### Planlagte Features
-- [ ] Implementer cloud files utforsker
-- [ ] Legg til Shopify dashboard funksjonalitet
-- [ ] Konfigurer analytics og tracking
-- [ ] Optimalisere for bedre performance
-- [ ] Legg til automatiske tester
+## 📈 Future Development
 
-### Potensielle Forbedringer
-- **API Routes**: Legg til serverless functions
-- **Database**: Koble til Azure Cosmos DB
-- **Authentication**: Implementer brukerinnlogging
-- **Real-time**: WebSockets for live updates
+### Planned Features
 
-## 📚 Basert på PROTONORD/project-lifecycle-manager
+  - [ ] Implement a cloud files explorer
+  - [ ] Add Shopify dashboard functionality
+  - [ ] Configure analytics and tracking
+  - [ ] Optimize for better performance
+  - [ ] Add automated tests
 
-Dette prosjektet er basert på innhold fra det opprinnelige repositoryet:
-- **Dokumentasjonsinnhold** hentet og tilpasset
-- **React komponenter** forenklet for statisk hosting
-- **Design og styling** beholdt og forbedret
-- **Prosjektstruktur** optimalisert for Azure deployment
+### Potential Improvements
 
-### Viktigste Endringer
-1. **Fjernet server-side dependencies** (Python scripts, Shopify API)
-2. **Forenklet React komponenter** til statisk innhold
-3. **Lagt til Azure Static Web Apps** deployment workflow
-4. **Optimalisert for statisk hosting** uten backend
+  - **API Routes**: Add serverless functions
+  - **Database**: Connect to Azure Cosmos DB
+  - **Authentication**: Implement user login
+  - **Real-time**: WebSockets for live updates
 
-## 🤝 Bidrag
+## 📚 Based on PROTONORD/project-lifecycle-manager
 
-1. Fork repositoryet
-2. Opprett feature branch (`git checkout -b feature/ny-funksjon`)
-3. Commit endringene (`git commit -m 'Legg til ny funksjon'`)
-4. Push til branch (`git push origin feature/ny-funksjon`)
-5. Opprett Pull Request
+This project is based on content from the original repository:
 
-## 📄 Lisens
+  - **Documentation content** has been sourced and adapted
+  - **React components** have been simplified for static hosting
+  - **Design and styling** have been retained and improved
+  - **Project structure** has been optimized for Azure deployment
 
-Dette prosjektet er proprietært for PROTONORD AS.
+### Key Changes
 
----
+1.  **Removed server-side dependencies** (Python scripts, Shopify API)
+2.  **Simplified React components** to static content
+3.  **Added Azure Static Web Apps** deployment workflow
+4.  **Optimized for static hosting** without a backend
 
-**Sist oppdatert**: Januar 2025  
-**Versjon**: 1.0  
-**Vedlikeholdt av**: PROTONORD Development Team
+## 🤝 Contributing
 
-## 📞 Kontakt
+1.  Fork the repository
+2.  Create a feature branch (`git checkout -b feature/new-feature`)
+3.  Commit your changes (`git commit -m 'Add new feature'`)
+4.  Push to the branch (`git push origin feature/new-feature`)
+5.  Create a Pull Request
 
-For spørsmål eller support, kontakt PROTONORD development team.
+## 📄 License
 
-**Live URL**: [Kommer når Azure Static Web App er opprettet]  
-**GitHub**: https://github.com/PROTONORD/azure-with-docusaurus
+This project is proprietary to PROTONORD AS.
+
+-----
+
+**Last updated**: January 2025
+**Version**: 1.0
+**Maintained by**: PROTONORD Development Team
+
+## 📞 Contact
+
+For questions or support, contact the PROTONORD development team.
+
+**Live URL**: [https://lively-moss-0296dab03.1.azurestaticapps.net/](https://lively-moss-0296dab03.1.azurestaticapps.net/)
+**GitHub**: [https://github.com/PROTONORD/azure-with-docusaurus](https://github.com/PROTONORD/azure-with-docusaurus)
